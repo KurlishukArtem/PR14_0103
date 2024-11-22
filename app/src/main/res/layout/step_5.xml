@@ -12,7 +12,7 @@
         android:layout_marginTop="160dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Шаг №4"
+        android:text="Шаг №5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Пожалуйста, укажите ваши параметры,\nчтобы мы более точно подготовили для Вас программу\nтренировки:"
+        android:text="Отлично, ...\nКак часто вы готовы заниматься спортом?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,75 +33,45 @@
         android:textSize="14dp"
         android:gravity="center"/>
 
-
-    <LinearLayout
+    <RadioGroup
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:orientation="vertical">
+        android:layout_marginLeft="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Gender">
         <TextView
-            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ваше вес:"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/white"
-            android:textSize="14dp"/>
-
-        <EditText
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:textColor="@color/black"
-            android:paddingLeft="15dp"
-            android:background="@drawable/button"
-            android:id="@+id/Weight"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="vertical">
-        <TextView
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ваш рост:"
+            android:text="Ваш пол:"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
             android:textSize="14dp"
-            />
-
-        <EditText
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:textColor="@color/black"
-            android:paddingLeft="15dp"
-            android:background="@drawable/button"
-            android:id="@+id/Height"
-            />
-    </LinearLayout>
+            android:gravity="center"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мужской"
+            android:textColor="@color/white"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Женский"
+            android:textColor="@color/white"/>
+    </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/GoToMain"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="160dp"
         android:background="@drawable/button"
-        android:textColor="#0097ff"
+        android:onClick="GoToMain"
         android:text="Продолжить"
-        android:onClick="GoToFive"
-        />
+        android:textColor="#0097ff" />
 </LinearLayout>
